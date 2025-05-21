@@ -1,0 +1,12 @@
+{
+  "name": "ChargeCast Dev",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "workspaceFolder": "/chargecast",
+  "extensions": [
+    "rust-lang.rust-analyzer",
+    "vscjava.vscode-java-pack",
+    "ms-androidtools.vscode-android"
+  ],
+  "postCreateCommand": "echo Dev container ready 🚀"
+}
