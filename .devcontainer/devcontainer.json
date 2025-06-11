@@ -1,12 +1,15 @@
 {
-  "name": "ChargeCast Dev",
-  "dockerFile": "../Dockerfile",
+  "name": "ChargeCast Dev Container",
   "context": "..",
-  "workspaceFolder": "/chargecast",
+  "dockerFile": "Dockerfile",
+  "remoteUser": "root",
+  "workspaceFolder": "/workspace",
+  "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
   "extensions": [
-    "rust-lang.rust-analyzer",
-    "vscjava.vscode-java-pack",
+    "vscjava.vscode-gradle",
     "ms-androidtools.vscode-android"
-  ],
-  "postCreateCommand": "echo Dev container ready 🚀"
+  ]
 }
